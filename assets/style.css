@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	min-height: 100%;
+	font-size: max(min(6vw, 1.5em), 1rem);
+	font-family: "Inter", sans-serif;
+}
+
+body {
+	background: linear-gradient(#ffe0e8, #ffece0);
+	padding: 2em 20%;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+pre.highlight {
+	margin: 0;
+}
+div.highlight {
+	margin: 1em 0;
+	padding: 16px;
+	border-radius: 0.25em;
+	overflow: auto;
+	font-size: 0.5em;
+	background-color: #f8f8f8b0
+}

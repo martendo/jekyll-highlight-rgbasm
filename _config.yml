@@ -1,0 +1,18 @@
+# Site settings
+title: jekyll-highlight-rgbasm
+description: >-
+  A Jekyll plugin using Rouge to highlight RGBASM Game Boy assembly language.
+baseurl: "/jekyll-highlight-rgbasm"
+url: "https://martendo.github.io/jekyll-highlight-rgbasm"
+
+# Build settings
+theme: null
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - README.md
