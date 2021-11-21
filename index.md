@@ -61,7 +61,6 @@ This page's code blocks were highlighted using jekyll-highlight-rgbasm!
 
 ```rgbasm
 INCLUDE "hardware.inc"
-INCLUDE "action.inc"
 
 SECTION "Action Variables", HRAM
 
@@ -100,29 +99,24 @@ DoAction::
 SECTION "Action Data Table", ROM0
 
 MACRO action
-	; Action icon tile data
-	PUSHS
-		SECTION "Action \1 Icon", ROMX
-
-		xAction\1Icon:
-			DEF ACTION_NAME EQUS STRLWR("\1")
-			INCBIN "res/{ACTION_NAME}/icon.2bpp"
-			PURGE ACTION_NAME
-	POPS
-
-	DB BANK(xAction\1Icon)
-	DW xAction\1Icon
-	DB BANK(xAction\1Handler)
-	DW xAction\1Handler
+	; Pointer including bank number to action handler
+	DB BANK(xAction\1)
+	DW xAction\1
+	; Action constant
+	DEF NAME EQUS STRUPR("\1")
+	DEF ACTION_{NAME} RB 1
+	PURGE NAME
 ENDM
 
 ActionTable:
+	RSRESET
 	; Regular actions
 	action Jump
 	action Climb
 	action Dance
 	action Magic
 	; Special actions
+	DEF SPECIAL_ACTIONS_START EQU _RS
 	action Quit
 	action Restart
 ```
