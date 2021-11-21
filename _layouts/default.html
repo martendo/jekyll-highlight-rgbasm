@@ -23,6 +23,7 @@
 	<body class="default">
 		{{ content }}
 		<script type="text/javascript">
+			document.getElementById("style-container").style = null;
 			const select = document.getElementById("style-select");
 			let style = select.value;
 			document.body.classList.add(style);
