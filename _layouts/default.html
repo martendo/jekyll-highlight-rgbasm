@@ -16,9 +16,25 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap">
 		<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
-		<link rel="stylesheet" href="{{ '/assets/highlight.css' | relative_url }}">
+		{% for style in site.styles %}
+			<link rel="stylesheet" href="{{ '/assets/' | append: style | append: '.css' | relative_url }}">
+		{% endfor %}
 	</head>
 	<body>
 		{{ content }}
+		<script type="text/javascript">
+			const blocks = document.querySelectorAll("div.highlight");
+			const select = document.getElementById("style-select");
+			let style = select.value;
+			for (const block of blocks) {
+				block.classList.add(style);
+			}
+			select.addEventListener("input", () => {
+				for (const block of blocks) {
+					block.classList.replace(style, select.value);
+				}
+				style = select.value;
+			});
+		</script>
 	</body>
 </html>

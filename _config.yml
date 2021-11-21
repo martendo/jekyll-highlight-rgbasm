@@ -16,3 +16,46 @@ defaults:
 
 exclude:
   - README.md
+
+# Pygments styles
+styles:
+  - default
+  - abap
+  - algol
+  - algol_nu
+  - arduino
+  - autumn
+  - borland
+  - bw
+  - colorful
+  - emacs
+  - friendly
+  - fruity
+  - gruvbox-dark
+  - gruvbox-light
+  - igor
+  - inkpot
+  - lovelace
+  - manni
+  - material
+  - monokai
+  - murphy
+  - native
+  - paraiso-dark
+  - paraiso-light
+  - pastie
+  - perldoc
+  - rainbow_dash
+  - rrt
+  - sas
+  - solarized-dark
+  - solarized-light
+  - stata-dark
+  - stata-light
+  - stata
+  - tango
+  - trac
+  - vim
+  - vs
+  - xcode
+  - zenburn
