@@ -49,7 +49,6 @@ This page's code blocks were highlighted using jekyll-highlight-rgbasm!
 		<option value="solarized-light">solarized-light</option>
 		<option value="stata-dark">stata-dark</option>
 		<option value="stata-light">stata-light</option>
-		<option value="stata">stata</option>
 		<option value="tango">tango</option>
 		<option value="trac">trac</option>
 		<option value="vim">vim</option>
