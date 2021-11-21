@@ -49,8 +49,8 @@ Jekyll::Hooks.register :site, :pre_render do
 			rule %r'`[0-3]+', Num # GFX constant
 			rule %r'\b[0-9_]+\.[0-9_]*', Num::Float # Fixed point number
 			rule %r'\b[0-9_]+', Num::Integer # Integer
-			rule %r'[&|^<>!=*/%~+-]+', Operator # Operator
-			rule %r'[.,:\(\)\[\]\\]+', Punctuation # Misc. symbol
+			rule %r'[&|^<>!=*/%~+-]', Operator # Operator
+			rule %r'[.,:\(\)\[\]\\]', Punctuation # Misc. symbol
 		end
 
 		state :comment do
