@@ -26,7 +26,7 @@
 			document.getElementById("style-container").style = null;
 			const select = document.getElementById("style-select");
 			let style = select.value;
-			document.body.classList.add(style);
+			document.body.classList.replace("default", style);
 			select.addEventListener("input", () => {
 				document.body.classList.replace(style, select.value);
 				style = select.value;
