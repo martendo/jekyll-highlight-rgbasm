@@ -159,7 +159,7 @@ DW %110, %1111_1111_1000_0001 ; Binary
 DW 0.125, 5. ; Fixed point
 DW `01233210 ; Graphics
 
-; NOTE: Arbitrary numberic characters not supported
+; NOTE: Arbitrary numeric characters not supported
 PUSHO
 	OPT g.oOX, bv^
 	DW `..ooOOXX, %^^^^v^^v
