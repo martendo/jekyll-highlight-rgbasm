@@ -16,6 +16,7 @@ defaults:
 
 exclude:
   - README.md
+  - LICENSE
 
 # Pygments styles
 styles:
