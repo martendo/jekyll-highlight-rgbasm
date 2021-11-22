@@ -170,4 +170,13 @@ PRINTLN "{#05X:@} {u:_RS}"
 
 DB 1, 2, 3, 4, 5, 6, /* 7, */ 8, 9, 10, \
 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+
+; `rl` and `set` can be ambiguous
+; Rule for highlighting: instruction if first word
+; of line, otherwise directive
+rl c
+DEF CONST RL 1
+set 7, [hl]
+VAR SET 0
+/* Wrong! */ set 2, a
 ```

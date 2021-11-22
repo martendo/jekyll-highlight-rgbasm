@@ -34,8 +34,11 @@ Jekyll::Hooks.register :site, :pre_render do
 			rule %r';.*?$', Comment::Single # Line comment
 			rule %r'"""', Str::Heredoc, :mlstring # Multi-line string
 			rule %r'"', Str, :string # String
-			rule %r'\b(?:adc|add|and|bit|call|ccf|cpl|cp|daa|dec|di|ei|halt|inc|jp|jr|ld|ldi|ldd|ldio|ldh|nop|or|pop|push|res|reti|ret|rlca|rlc|rla|rl|rrc|rrca|rra|rr|rst|sbc|scf|set|sla|sra|srl|stop|sub|swap|xor)\b'i, Keyword # Instruction
-			rule %r'\b(?:def|fragment|bank|align|sizeof|startof|round|ceil|floor|div|mul|pow|log|sin|cos|tan|asin|acos|atan|atan2|high|low|isconst|strcmp|strin|strrin|strsub|strlen|strcat|strupr|strlwr|strrpl|strfmt|charlen|charsub|include|print|println|printt|printi|printv|printf|export|ds|db|dw|dl|section|purge|rsreset|rsset|incbin|charmap|newcharmap|setcharmap|pushc|popc|fail|warn|fatal|assert|static_assert|macro|endm|shift|rept|for|endr|break|load|endl|if|else|elif|endc|union|nextu|endu|rb|rw|equ|equs|redef|pushs|pops|pusho|popo)\b'i, Name::Function # Directive
+			rule %r'\b(?:adc|add|and|bit|call|ccf|cpl|cp|daa|dec|di|ei|halt|inc|jp|jr|ld|ldi|ldd|ldio|ldh|nop|or|pop|push|res|reti|ret|rlca|rlc|rla|rrc|rrca|rra|rr|rst|sbc|scf|sla|sra|srl|stop|sub|swap|xor)\b'i, Keyword # Instruction; ambiguities missing, handled next
+			rule %r'^([ \t]*)(rl|set)\b'i do
+				groups Text, Keyword # Instruction
+			end
+			rule %r'\b(?:def|fragment|bank|align|sizeof|startof|round|ceil|floor|div|mul|pow|log|sin|cos|tan|asin|acos|atan|atan2|high|low|isconst|strcmp|strin|strrin|strsub|strlen|strcat|strupr|strlwr|strrpl|strfmt|charlen|charsub|include|print|println|printt|printi|printv|printf|export|ds|db|dw|dl|section|purge|rsreset|rsset|incbin|charmap|newcharmap|setcharmap|pushc|popc|fail|warn|fatal|assert|static_assert|macro|endm|shift|rept|for|endr|break|load|endl|if|else|elif|endc|union|nextu|endu|rb|rw|rl|equ|equs|redef|set|pushs|pops|pusho|popo)\b'i, Name::Function # Directive
 			rule %r'\b(opt)\b(.+?)$'i do
 				groups Name::Function, Text # Assmebler options
 			end
