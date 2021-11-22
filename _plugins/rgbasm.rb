@@ -40,7 +40,7 @@ Jekyll::Hooks.register :site, :pre_render do
 				groups Name::Function, Text # Assmebler options
 			end
 			rule %r'\b(?:wram0|vram|romx|rom0|hram|wramx|sram|oam)\b'i, Keyword::Type # Section type
-			rule %r'\b(?:af|bc|de|hl|sp|hld|hli|a|b|c|d|e|h|l)\b'i, Name::Variable # Register
+			rule %r'\b(?:af|bc|de|hl|sp|hld|hli|a|b|c|d|e|h|l|z|nz|nc)\b'i, Name::Variable # Register/Condition code
 			mixin :symbols
 			mixin :macargs
 			rule %r'\$[0-9a-f_]+'i, Num::Hex # Hex number
