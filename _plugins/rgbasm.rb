@@ -22,7 +22,7 @@ Jekyll::Hooks.register :site, :pre_render do
 		end
 
 		state :root do
-			rule %r'\s+', Text
+			rule %r'[ \t\n]+', Text
 			rule %r'^([ \t]*)([a-z_][a-z0-9_#@]*::?)'i do
 				groups Text, Name::Label # Global label definition
 			end
