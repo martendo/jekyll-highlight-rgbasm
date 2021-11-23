@@ -39,7 +39,7 @@ Jekyll::Hooks.register :site, :pre_render do
 				groups Text, Keyword # Instruction
 			end
 			rule %r'\b(?:def|fragment|bank|align|sizeof|startof|round|ceil|floor|div|mul|pow|log|sin|cos|tan|asin|acos|atan|atan2|high|low|isconst|strcmp|strin|strrin|strsub|strlen|strcat|strupr|strlwr|strrpl|strfmt|charlen|charsub|include|print|println|printt|printi|printv|printf|export|ds|db|dw|dl|section|purge|rsreset|rsset|incbin|charmap|newcharmap|setcharmap|pushc|popc|fail|warn|fatal|assert|static_assert|macro|endm|shift|rept|for|endr|break|load|endl|if|else|elif|endc|union|nextu|endu|rb|rw|rl|equ|equs|redef|set|pushs|pops|pusho|popo)\b'i, Name::Function # Directive
-			rule %r'\b(opt)\b(.+?)$'i do
+			rule %r'\b(opt)\b(.+?)(?=\n|;|/*)'i do
 				groups Name::Function, Text # Assmebler options
 			end
 			rule %r'\b(?:wram0|vram|romx|rom0|hram|wramx|sram|oam)\b'i, Keyword::Type # Section type
