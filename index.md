@@ -160,6 +160,13 @@ PUSHO
 	DW `..ooOOXX, %^^^^v^^v
 POPO
 
+; Operators
+IF 7 % 6 & $0F || 4 - 1 & 2 == 2 ** 3
+	DB (8 - 5) << 3 / 2 ^ 1
+	; NOTE: Non-existent operators still highlighted
+	PRINTLN STRFMT("%d", 1 %%% 2)
+ENDC
+
 ; Macro arguments
 DL \1, \#, \<10>, \<_NARG>
 DL \20, \0
