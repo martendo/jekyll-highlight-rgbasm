@@ -62,8 +62,17 @@ Jekyll::Hooks.register :site, :pre_render do
 			rule %r'[*/]', Comment::Multiline
 		end
 
+		state :linecont do
+			rule %r';.*?$', Comment::Single
+			rule %r'\n', Str::Escape, :pop!
+		end
+
 		state :mlstring do
 			rule %r'[^"\\{]+', Str::Heredoc
+			rule %r'(\\)([ \t]+)' do
+				groups Str::Escape, Text
+				push :linecont
+			end
 			mixin :macargs
 			rule %r'\\.'m, Str::Escape
 			rule %r'{', Str::Interpol, :interpol
@@ -74,6 +83,10 @@ Jekyll::Hooks.register :site, :pre_render do
 		state :string do
 			rule %r'[^"\\{\n]+', Str
 			rule %r'\n', Error, :pop!
+			rule %r'(\\)([ \t]+)' do
+				groups Str::Escape, Text
+				push :linecont
+			end
 			mixin :macargs
 			rule %r'\\.'m, Str::Escape
 			rule %r'{', Str::Interpol, :interpol
