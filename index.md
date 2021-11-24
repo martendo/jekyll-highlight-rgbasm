@@ -128,7 +128,7 @@ ExportedGlobalLabel::
 .exportedLocalLabel::
 NotLabel
 ; Anonymous label definition and reference
-:	jr	:-
+:	jr	!c, :-
 
 /* Block comment
 conitnues until
