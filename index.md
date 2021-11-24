@@ -139,9 +139,9 @@ DB """Multi-line string that contains
 newlines
 """
 
-DB "Regular string that can contain \
-escaped newlines but can't have them
-unescaped"
+DB "Regular string with line continuations \ ; Comment!
+but can't contain literal
+newlines"
 
 DB "String with {#02X:SYMBOL_INTERPOLATION} "
 DB "and \"escape sequences\""
