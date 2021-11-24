@@ -16,45 +16,9 @@ This page's code blocks were highlighted using jekyll-highlight-rgbasm!
 	<label for="style-select">Style:</label>
 	<br>
 	<select id="style-select">
-		<option value="default">default</option>
-		<option value="abap">abap</option>
-		<option value="algol">algol</option>
-		<option value="algol_nu">algol_nu</option>
-		<option value="arduino">arduino</option>
-		<option value="autumn">autumn</option>
-		<option value="borland">borland</option>
-		<option value="bw">bw</option>
-		<option value="colorful">colorful</option>
-		<option value="emacs">emacs</option>
-		<option value="friendly">friendly</option>
-		<option value="fruity">fruity</option>
-		<option value="gruvbox-dark">gruvbox-dark</option>
-		<option value="gruvbox-light">gruvbox-light</option>
-		<option value="igor">igor</option>
-		<option value="inkpot">inkpot</option>
-		<option value="lovelace">lovelace</option>
-		<option value="manni">manni</option>
-		<option value="material">material</option>
-		<option value="monokai">monokai</option>
-		<option value="murphy">murphy</option>
-		<option value="native">native</option>
-		<option value="paraiso-dark">paraiso-dark</option>
-		<option value="paraiso-light">paraiso-light</option>
-		<option value="pastie">pastie</option>
-		<option value="perldoc">perldoc</option>
-		<option value="rainbow_dash">rainbow_dash</option>
-		<option value="rrt">rrt</option>
-		<option value="sas">sas</option>
-		<option value="solarized-dark">solarized-dark</option>
-		<option value="solarized-light">solarized-light</option>
-		<option value="stata-dark">stata-dark</option>
-		<option value="stata-light">stata-light</option>
-		<option value="tango">tango</option>
-		<option value="trac">trac</option>
-		<option value="vim">vim</option>
-		<option value="vs">vs</option>
-		<option value="xcode">xcode</option>
-		<option value="zenburn">zenburn</option>
+		{% for style in site.styles %}
+			<option>{{ style }}</option>
+		{% endfor %}
 	</select>
 </div>
 
