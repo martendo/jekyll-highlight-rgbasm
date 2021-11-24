@@ -149,6 +149,8 @@ DB "and \"escape sequences\""
 ; Only symbols inside symbol interpolation construct
 jp .{STRLWR(NAME)}
 
+PRINTLN "Invalid escape sequence: '\q'"
+
 DW 100, 50_000 ; Decimal
 DW $9C00, $FE_40 ; Hexadecimal
 DW &777, &2_03 ; Octal

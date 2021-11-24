@@ -79,7 +79,8 @@ Jekyll::Hooks.register :site, :pre_render do
 				push :linecont
 			end
 			mixin :macargs
-			rule %r'\\.'m, Str::Escape
+			rule %r'\\[\\"{}nrt \n,()]', Str::Escape
+			rule %r'\\.', Error
 			rule %r'{', Str::Interpol, :interpol
 			rule %r'"""', Str::Heredoc, :pop!
 			rule %r'"', Str::Heredoc
@@ -93,7 +94,8 @@ Jekyll::Hooks.register :site, :pre_render do
 				push :linecont
 			end
 			mixin :macargs
-			rule %r'\\.'m, Str::Escape
+			rule %r'\\[\\"{}nrt \n,()]', Str::Escape
+			rule %r'\\.', Error
 			rule %r'{', Str::Interpol, :interpol
 			rule %r'"', Str, :pop!
 		end
