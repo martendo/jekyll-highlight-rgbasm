@@ -13,6 +13,7 @@ Jekyll::Hooks.register :site, :pre_render do
 			rule %r'\b(?:_RS|_NARG|__LINE__|__FILE__|__DATE__|__TIME__|__ISO_8601_LOCAL__|__ISO_8601_UTC__|__UTC_YEAR__|__UTC_MONTH__|__UTC_DAY__|__UTC_HOUR__|__UTC_MINUTE__|__UTC_SECOND__|__RGBDS_MAJOR__|__RGBDS_MINOR__|__RGBDS_PATCH__|__RGBDS_RC__|__RGBDS_VERSION__)\b', Name::Builtin # Predeclared symbol
 			rule %r'[a-z_][a-z0-9_#@]*'i, Name # Symbol
 			rule %r'(?:[a-z_][a-z0-9_#@]*)?\.[a-z0-9_#@]+'i, Name # Local label (global handled by above "Symbol")
+			rule %r':(?:-+|\++)', Name # Anonymous label
 		end
 
 		state :macargs do
@@ -28,6 +29,9 @@ Jekyll::Hooks.register :site, :pre_render do
 			end
 			rule %r'^([ \t]*)((?:[a-z_][a-z0-9_#@]*)?\.[a-z0-9_#@]+:?:?)'i do
 				groups Text, Name::Label # Local label definition
+			end
+			rule %r'^([ \t]*)(:)' do
+				groups Text, Name::Label # Anonymous label definition
 			end
 			rule %r'{', Str::Interpol, :interpol # Symbol interpolation
 			rule %r'/\*', Comment::Multiline, :comment # Multiline comment
