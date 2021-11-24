@@ -152,7 +152,7 @@ DW $9C00, $FE_40 ; Hexadecimal
 DW &777, &2_03 ; Octal
 DW %110, %1111_1111_1000_0001 ; Binary
 DW 0.125, 5. ; Fixed point
-DW `01233210 ; Graphics
+DW `01233210, `3311_2233 ; Graphics
 
 ; NOTE: Arbitrary numeric characters not supported
 PUSHO

@@ -43,13 +43,14 @@ Jekyll::Hooks.register :site, :pre_render do
 				groups Name::Function, Text # Assmebler options
 			end
 			rule %r'\b(?:wram0|vram|romx|rom0|hram|wramx|sram|oam)\b'i, Keyword::Type # Section type
-			rule %r'\b(?:af|bc|de|hl|sp|hld|hli|a|b|c|d|e|h|l|z|nz|nc)\b'i, Name::Variable # Register/Condition code
+			rule %r'\b(?:af|bc|de|hl|sp|hld|hli|a|b|c|d|e|h|l)\b'i, Name::Variable # Register
+			rule %r'(?<=[^a-z_!]|^)!*n?[cz]\b'i, Name::Variable # Condition code
 			mixin :symbols
 			mixin :macargs
 			rule %r'\$[0-9a-f_]+'i, Num::Hex # Hex number
 			rule %r'&[0-7_]+', Num::Oct # Octal number
 			rule %r'%[01_]+', Num::Bin # Binary number
-			rule %r'`[0-3]+', Num # GFX constant
+			rule %r'`[0-3_]+', Num # GFX constant
 			rule %r'\b[0-9_]+\.[0-9_]*', Num::Float # Fixed point number
 			rule %r'\b[0-9_]+', Num::Integer # Integer
 			rule %r'[&|^<>!=*/%~+-]', Operator # Operator
