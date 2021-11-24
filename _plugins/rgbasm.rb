@@ -62,9 +62,9 @@ Jekyll::Hooks.register :site, :pre_render do
 		end
 
 		state :comment do
-			rule %r'[^*/]+', Comment::Multiline
+			rule %r'[^*]+', Comment::Multiline
 			rule %r'\*/', Comment::Multiline, :pop!
-			rule %r'[*/]', Comment::Multiline
+			rule %r'\*', Comment::Multiline
 		end
 
 		state :linecont do
