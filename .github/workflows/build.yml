@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Build GitHub Pages
+    name: Build site
     runs-on: ubuntu-latest
 
     steps:
@@ -27,19 +27,44 @@ jobs:
 
       - name: Organize
         run: |
-          GLOBIGNORE="_site:.git"
+          shopt -s dotglob
+          GLOBIGNORE="_site"
           rm -rf *
           unset GLOBIGNORE
+          shopt -u dotglob
           mv -t . _site/*
           rmdir _site
+
+      - name: Store build
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: .
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+
+      - name: Empty working directory
+        run: rm -rf *
+
+      - name: Get build
+        uses: actions/download-artifact@v2
+        with:
+          name: build
 
       - name: Deploy
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git checkout --orphan gh-pages
-          git reset
-          git add .
-          git commit --message="Build GitHub Pages"
-          git push --force origin gh-pages
+          git add --all
+          git commit --message="Update build"
+          git push origin gh-pages
