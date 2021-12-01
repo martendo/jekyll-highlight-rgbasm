@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jekyll-highlight-rgbasm</title>
+
+		<meta name="title" content="jekyll-highlight-rgbasm">
+
+		<meta property="og:title" content="jekyll-highlight-rgbasm">
+		<meta property="og:description" content="A Jekyll plugin using Rouge to highlight RGBASM Game Boy assembly language.">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://martendo.github.io/jekyll-highlight-rgbasm">
+		<meta property="og:locale" content="en_CA">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap">
+		<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/style.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/default.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/abap.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/algol.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/algol_nu.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/arduino.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/autumn.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/borland.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/bw.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/colorful.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/emacs.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/friendly.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/fruity.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/gruvbox-dark.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/gruvbox-light.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/igor.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/inkpot.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/lovelace.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/manni.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/material.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/monokai.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/murphy.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/native.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/paraiso-dark.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/paraiso-light.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/pastie.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/perldoc.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/rainbow_dash.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/rrt.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/sas.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/solarized-dark.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/solarized-light.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/stata-dark.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/stata-light.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/tango.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/trac.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/vim.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/vs.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/xcode.css">
+		
+			<link rel="stylesheet" href="/jekyll-highlight-rgbasm/assets/highlight/zenburn.css">
+		
+	</head>
+	<body class="default">
+		<h1 id="jekyll-highlight-rgbasm">jekyll-highlight-rgbasm</h1>
+
+<p>A Jekyll plugin using Rouge to highlight RGBASM Game Boy assembly language.</p>
+
+<p><a href="https://github.com/martendo/jekyll-highlight-rgbasm">https://github.com/martendo/jekyll-highlight-rgbasm</a></p>
+
+<p>This page’s code blocks were highlighted using jekyll-highlight-rgbasm!</p>
+
+<h2 id="examples">Examples</h2>
+
+<div id="style-container" style="display: none;">
+	<label for="style-select">Style:</label>
+	<br />
+	<select id="style-select">
+		
+			<option>default</option>
+		
+			<option>abap</option>
+		
+			<option>algol</option>
+		
+			<option>algol_nu</option>
+		
+			<option>arduino</option>
+		
+			<option>autumn</option>
+		
+			<option>borland</option>
+		
+			<option>bw</option>
+		
+			<option>colorful</option>
+		
+			<option>emacs</option>
+		
+			<option>friendly</option>
+		
+			<option>fruity</option>
+		
+			<option>gruvbox-dark</option>
+		
+			<option>gruvbox-light</option>
+		
+			<option>igor</option>
+		
+			<option>inkpot</option>
+		
+			<option>lovelace</option>
+		
+			<option>manni</option>
+		
+			<option>material</option>
+		
+			<option>monokai</option>
+		
+			<option>murphy</option>
+		
+			<option>native</option>
+		
+			<option>paraiso-dark</option>
+		
+			<option>paraiso-light</option>
+		
+			<option>pastie</option>
+		
+			<option>perldoc</option>
+		
+			<option>rainbow_dash</option>
+		
+			<option>rrt</option>
+		
+			<option>sas</option>
+		
+			<option>solarized-dark</option>
+		
+			<option>solarized-light</option>
+		
+			<option>stata-dark</option>
+		
+			<option>stata-light</option>
+		
+			<option>tango</option>
+		
+			<option>trac</option>
+		
+			<option>vim</option>
+		
+			<option>vs</option>
+		
+			<option>xcode</option>
+		
+			<option>zenburn</option>
+		
+	</select>
+</div>
+
+<div class="language-rgbasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">INCLUDE</span> <span class="s">"hardware.inc"</span>
+
+<span class="nf">SECTION</span> <span class="s">"Action Variables"</span><span class="p">,</span> <span class="kt">HRAM</span>
+
+<span class="nl">hCurrentAction::</span>
+	<span class="nf">DS</span> <span class="mi">1</span>
+
+<span class="nf">SECTION</span> <span class="s">"Action Handling"</span><span class="p">,</span> <span class="kt">ROM0</span>
+
+<span class="nl">DoAction::</span>
+	<span class="c1">; Do nothing for special actions</span>
+	<span class="k">ldh</span>	<span class="nv">a</span><span class="p">,</span> <span class="p">[</span><span class="n">hCurrentAction</span><span class="p">]</span>
+	<span class="k">cp</span>	<span class="nv">a</span><span class="p">,</span> <span class="n">SPECIAL_ACTIONS_START</span>
+	<span class="k">ret</span>	<span class="nv">nc</span>
+
+	<span class="c1">; Get pointer to action handler</span>
+	<span class="k">ld</span>	<span class="nv">b</span><span class="p">,</span> <span class="nv">a</span>
+	<span class="k">add</span>	<span class="nv">a</span><span class="p">,</span> <span class="nv">a</span> <span class="c1">; Pointer: 2 bytes</span>
+	<span class="k">add</span>	<span class="nv">a</span><span class="p">,</span> <span class="nv">b</span> <span class="c1">; +Bank: 1 byte</span>
+	<span class="k">add</span>	<span class="nv">a</span><span class="p">,</span> <span class="nf">LOW</span><span class="p">(</span><span class="n">ActionTable</span><span class="p">)</span>
+	<span class="k">ld</span>	<span class="nv">l</span><span class="p">,</span> <span class="nv">a</span>
+	<span class="k">adc</span>	<span class="nv">a</span><span class="p">,</span> <span class="nf">HIGH</span><span class="p">(</span><span class="n">ActionTable</span><span class="p">)</span>
+	<span class="k">sub</span>	<span class="nv">a</span><span class="p">,</span> <span class="nv">l</span>
+	<span class="k">ld</span>	<span class="nv">h</span><span class="p">,</span> <span class="nv">a</span>
+
+	<span class="c1">; Switch to action handler's bank</span>
+	<span class="k">ld</span>	<span class="nv">a</span><span class="p">,</span> <span class="p">[</span><span class="nv">hli</span><span class="p">]</span>
+	<span class="k">ldh</span>	<span class="p">[</span><span class="n">hCurrentROMB</span><span class="p">],</span> <span class="nv">a</span>
+	<span class="k">ld</span>	<span class="p">[</span><span class="n">rROMB0</span><span class="p">],</span> <span class="nv">a</span>
+
+	<span class="c1">; Jump to action handler</span>
+	<span class="k">ld</span>	<span class="nv">a</span><span class="p">,</span> <span class="p">[</span><span class="nv">hli</span><span class="p">]</span>
+	<span class="k">ld</span>	<span class="nv">h</span><span class="p">,</span> <span class="p">[</span><span class="nv">hl</span><span class="p">]</span>
+	<span class="k">ld</span>	<span class="nv">l</span><span class="p">,</span> <span class="nv">a</span>
+	<span class="k">jp</span>	<span class="nv">hl</span>
+
+<span class="nf">SECTION</span> <span class="s">"Action Data Table"</span><span class="p">,</span> <span class="kt">ROM0</span>
+
+<span class="nf">MACRO</span> <span class="n">action</span>
+	<span class="c1">; Pointer including bank number to action handler</span>
+	<span class="nf">DB</span> <span class="nf">BANK</span><span class="p">(</span><span class="n">xAction</span><span class="se">\1</span><span class="p">)</span>
+	<span class="nf">DW</span> <span class="n">xAction</span><span class="se">\1</span>
+	<span class="c1">; Action constant</span>
+	<span class="nf">DEF</span> <span class="n">NAME</span> <span class="nf">EQUS</span> <span class="nf">STRUPR</span><span class="p">(</span><span class="s">"</span><span class="se">\1</span><span class="s">"</span><span class="p">)</span>
+	<span class="nf">DEF</span> <span class="n">ACTION_</span><span class="si">{</span><span class="n">NAME</span><span class="si">}</span> <span class="nf">RB</span> <span class="mi">1</span>
+	<span class="nf">PURGE</span> <span class="n">NAME</span>
+<span class="nf">ENDM</span>
+
+<span class="nl">ActionTable:</span>
+	<span class="nf">RSRESET</span>
+	<span class="c1">; Regular actions</span>
+	<span class="n">action</span> <span class="n">Jump</span>
+	<span class="n">action</span> <span class="n">Climb</span>
+	<span class="n">action</span> <span class="n">Dance</span>
+	<span class="n">action</span> <span class="n">Magic</span>
+	<span class="c1">; Special actions</span>
+	<span class="nf">DEF</span> <span class="n">SPECIAL_ACTIONS_START</span> <span class="nf">EQU</span> <span class="nb">_RS</span>
+	<span class="n">action</span> <span class="n">Quit</span>
+	<span class="n">action</span> <span class="n">Restart</span>
+</code></pre></div></div>
+
+<div class="language-rgbasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">GlobalLabel:</span>
+<span class="nl">ExportedGlobalLabel::</span>
+<span class="nl">.localLabel</span>
+<span class="nl">.localLabel2:</span>
+<span class="nl">.exportedLocalLabel::</span>
+<span class="n">NotLabel</span>
+<span class="c1">; Anonymous label definition and reference</span>
+<span class="nl">:</span>	<span class="k">jr</span>	<span class="nv">!c</span><span class="p">,</span> <span class="n">:-</span>
+
+<span class="cm">/* Block comment
+conitnues until
+/*
+here! */</span>
+
+<span class="nf">DB</span> <span class="sh">"""Multi-line string that contains
+newlines
+"""</span>
+
+<span class="nf">DB</span> <span class="s">"Regular string with line continuations </span><span class="se">\</span> <span class="c1">; Comment!</span><span class="se">
+</span><span class="s">but can't contain literal</span><span class="err">
+</span><span class="n">newlines</span><span class="s">"</span><span class="err">
+</span>
+<span class="nf">DB</span> <span class="s">"String with </span><span class="si">{#02X:</span><span class="n">SYMBOL_INTERPOLATION</span><span class="si">}</span><span class="s"> "</span>
+<span class="nf">DB</span> <span class="s">"and </span><span class="se">\"</span><span class="s">escape sequences</span><span class="se">\"</span><span class="s">"</span>
+
+<span class="c1">; Only symbols inside symbol interpolation construct</span>
+<span class="k">jp</span> <span class="p">.</span><span class="si">{</span><span class="n">STRLWR</span><span class="err">(</span><span class="n">NAME</span><span class="err">)</span><span class="si">}</span>
+
+<span class="nf">PRINTLN</span> <span class="s">"Invalid escape sequence: '</span><span class="err">\q</span><span class="s">'"</span>
+
+<span class="nf">DW</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50_000</span> <span class="c1">; Decimal</span>
+<span class="nf">DW</span> <span class="mh">$9C00</span><span class="p">,</span> <span class="mh">$FE_40</span> <span class="c1">; Hexadecimal</span>
+<span class="nf">DW</span> <span class="mo">&amp;777</span><span class="p">,</span> <span class="mo">&amp;2_03</span> <span class="c1">; Octal</span>
+<span class="nf">DW</span> <span class="mb">%110</span><span class="p">,</span> <span class="mb">%1111_1111_1000_0001</span> <span class="c1">; Binary</span>
+<span class="nf">DW</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">32_2._53</span><span class="p">,</span> <span class="mf">5.</span> <span class="c1">; Fixed point</span>
+<span class="nf">DW</span> <span class="m">`01233210</span><span class="p">,</span> <span class="m">`3311_2233</span> <span class="c1">; Graphics</span>
+
+<span class="c1">; NOTE: Arbitrary numeric characters not supported</span>
+<span class="nf">PUSHO</span>
+	<span class="nf">OPT</span> <span class="n">g.oOX</span><span class="p">,</span> <span class="n">bv</span><span class="o">^</span>
+	<span class="nf">DW</span> <span class="err">`</span><span class="p">.</span><span class="n">.ooOOXX</span><span class="p">,</span> <span class="o">%^^^^</span><span class="n">v</span><span class="o">^^</span><span class="n">v</span>
+<span class="nf">POPO</span>
+
+<span class="c1">; Operators</span>
+<span class="nf">IF</span> <span class="mi">7</span> <span class="o">%</span> <span class="mi">6</span> <span class="o">&amp;</span> <span class="mh">$0F</span> <span class="o">||</span> <span class="mi">4</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&amp;</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span>
+	<span class="nf">DB</span> <span class="p">(</span><span class="mi">8</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">^</span> <span class="mi">1</span>
+	<span class="c1">; NOTE: Non-existent operators still highlighted</span>
+	<span class="nf">PRINTLN</span> <span class="nf">STRFMT</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="mi">1</span> <span class="o">%%%</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nf">ENDC</span>
+
+<span class="c1">; Macro arguments</span>
+<span class="nf">DL</span> <span class="se">\1</span><span class="p">,</span> <span class="se">\#</span><span class="p">,</span> <span class="se">\&lt;10&gt;</span><span class="p">,</span> <span class="se">\&lt;_NARG&gt;</span>
+<span class="nf">DL</span> <span class="se">\2</span><span class="mi">0</span><span class="p">,</span> <span class="err">\0</span>
+
+<span class="c1">; Predeclared symbols</span>
+<span class="nf">PRINTLN</span> <span class="nb">__ISO_8601_UTC__</span>
+<span class="nf">PRINTLN</span> <span class="s">"</span><span class="si">{#05X:</span><span class="nb">@</span><span class="si">}</span><span class="s"> </span><span class="si">{u:</span><span class="nb">_RS</span><span class="si">}</span><span class="s">"</span>
+
+<span class="nf">DB</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="cm">/* 7, */</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">\</span>
+<span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span>
+
+<span class="c1">; `rl` and `set` can be ambiguous</span>
+<span class="c1">; Rule for highlighting: instruction if first word</span>
+<span class="c1">; of line, otherwise directive</span>
+<span class="k">rl</span> <span class="nv">c</span>
+<span class="nf">DEF</span> <span class="n">CONST</span> <span class="nf">RL</span> <span class="mi">1</span>
+<span class="k">set</span> <span class="mi">7</span><span class="p">,</span> <span class="p">[</span><span class="nv">hl</span><span class="p">]</span>
+<span class="n">VAR</span> <span class="nf">SET</span> <span class="mi">0</span>
+<span class="cm">/* Wrong! */</span> <span class="nf">set</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">a</span>
+</code></pre></div></div>
+
+		<script type="text/javascript">
+			document.getElementById("style-container").style = null;
+			const select = document.getElementById("style-select");
+			let style = select.value;
+			document.body.classList.replace("default", style);
+			select.addEventListener("input", () => {
+				document.body.classList.replace(style, select.value);
+				style = select.value;
+			});
+		</script>
+	</body>
+</html>
