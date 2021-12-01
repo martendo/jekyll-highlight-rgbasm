@@ -16,7 +16,7 @@ This page's code blocks were highlighted using jekyll-highlight-rgbasm!
 	<label for="style-select">Style:</label>
 	<br>
 	<select id="style-select">
-		{% for style in site.styles %}
+		{% for style in site.data.styles %}
 			<option>{{ style }}</option>
 		{% endfor %}
 	</select>
